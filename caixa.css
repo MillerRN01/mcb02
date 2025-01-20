@@ -1,0 +1,174 @@
+/* Variáveis */
+:root {
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Layout principal */
+.main-content {
+    padding: 2rem;
+    margin-left: 280px;
+}
+
+/* Cards */
+.card {
+    box-shadow: var(--shadow);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 1rem;
+}
+
+/* Status do Caixa */
+.status-indicator {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.status-indicator.opened {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+}
+
+.status-indicator.closed {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+}
+
+/* Saldo e Resumo */
+.current-balance {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.current-balance h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.current-balance h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.daily-summary {
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Botões de ação */
+.action-buttons {
+    gap: 1rem;
+}
+
+.action-buttons .btn {
+    padding: 0.75rem;
+    font-weight: 500;
+}
+
+/* Tabela de transações */
+.table-responsive {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    border: none;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Badges e estados */
+.badge {
+    padding: 0.5rem 0.8rem;
+    font-weight: 500;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-group {
+    width: 100%;
+}
+
+.btn-check:checked + .btn-outline-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-check:checked + .btn-outline-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .current-balance h2 {
+        font-size: 2rem;
+    }
+}
