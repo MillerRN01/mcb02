@@ -1,0 +1,116 @@
+/* Estilos do menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: linear-gradient(145deg, #2193b0, #6dd5ed);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 10px 10px 0;
+    transition: left 0.4s ease; /* Transição apenas para a propriedade 'left' */
+    overflow-y: auto;
+    z-index: 1000; /* Certifique-se de que o menu fique acima de outros elementos */
+}
+
+.sidebar.show {
+    left: 0; /* Exibe o menu lateral */
+}
+
+/* Header do menu */
+.sidebar-header {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Lista de links */
+.sidebar-list a {
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Especificar propriedades de transição */
+    border-radius: 8px;
+    margin: 10px; /* Remover margem duplicada */
+}
+
+.sidebar-list a i {
+    margin-right: 15px;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover nos links */
+.sidebar-list a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.sidebar-list a:hover i {
+    color: #ffeb3b; /* Cor do ícone ao passar o mouse */
+    transform: rotate(20deg); /* Rotação do ícone ao passar o mouse */
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    transition: margin-left 0.4s ease;
+    padding: 20px;
+}
+
+.content.shift {
+    margin-left: 300px; /* Espaço para o menu lateral */
+}
+
+/* Estilo do Navbar */
+.navbar {
+    background: linear-gradient(90deg, #2193b0, #6dd5ed);
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+    cursor: pointer; /* Adiciona o ponteiro ao passar o mouse */
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Barra de rolagem personalizada */
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Cor do "polegar" */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8); /* Cor ao passar o mouse */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); /* Fundo da barra de rolagem */
+    border-radius: 4px;
+}
+
+/* Efeito de hover no botão do Navbar */
+.navbar-toggler i {
+    color: white;
+    font-size: 1.8rem; /* Ajuste o tamanho do ícone */
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover i {
+    transform: scale(1.2); /* Aumenta levemente o ícone */
+}

@@ -1,0 +1,380 @@
+/* Layout Principal */
+.configuracoes-content {
+    padding: 20px;
+}
+
+.config-container {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+}
+
+/* Menu Lateral */
+.config-menu {
+    width: 250px;
+    padding: 20px 0;
+    border-right: 1px solid var(--border-color);
+    background: var(--background-light);
+}
+
+.menu-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-item i {
+    width: 20px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.menu-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.menu-item.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.menu-item.active i {
+    color: white;
+}
+
+/* Conteúdo das Configurações */
+.config-content {
+    flex: 1;
+    padding: 20px;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+.config-tab {
+    display: none;
+}
+
+.config-tab.active {
+    display: block;
+}
+
+.config-tab h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Seções de Formulário */
+.form-section {
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-section h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Grupos de Formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Grupo de Checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Upload de Logo */
+.logo-upload {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo-upload img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.upload-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CEP Group */
+.cep-group {
+    display: flex;
+    gap: 10px;
+}
+
+.cep-group input {
+    flex: 1;
+}
+
+/* Integrações */
+.integracoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.integracao-card {
+    background: var(--background-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* API Key Display */
+.api-key {
+    margin-bottom: 15px;
+}
+
+.key-display {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.key-display input {
+    flex: 1;
+    background: var(--background-color);
+}
+
+/* Marketplace List */
+.marketplace-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.marketplace-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+}
+
+.marketplace-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Temas */
+.theme-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.theme-option input[type="radio"] {
+    display: none;
+}
+
+.theme-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.theme-preview {
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.theme-preview.light {
+    background: #ffffff;
+}
+
+.theme-preview.dark {
+    background: #1a1a1a;
+}
+
+.theme-preview.custom {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+}
+
+.theme-option input[type="radio"]:checked + label .theme-preview {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* Color Grid */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.color-grid input[type="color"] {
+    width: 100%;
+    height: 40px;
+    padding: 2px;
+}
+
+/* Botões e Ações */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .config-container {
+        flex-direction: column;
+    }
+
+    .config-menu {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-upload {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .integracoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .config-container {
+        flex-direction: column;
+    }
+
+    .config-menu {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-upload {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .integracoes-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .theme-options {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .color-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

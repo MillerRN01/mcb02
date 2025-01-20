@@ -1,0 +1,214 @@
+/* Estilos específicos para a página de vendas */
+.vendas-content {
+    padding: 20px;
+}
+
+/* Resumo de Vendas */
+.sales-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.summary-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.summary-info h3 {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.summary-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.summary-info span {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* Tabela de Vendas */
+.sales-table th,
+.sales-table td {
+    padding: 12px 15px;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-concluida {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.status-pendente {
+    background: rgba(255, 193, 7, 0.1);
+    color: #FFC107;
+}
+
+.status-cancelada {
+    background: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+}
+
+/* Modal de Nova Venda */
+.modal-lg {
+    max-width: 900px;
+    width: 90%;
+}
+
+.sale-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-section {
+    background: var(--background-light);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.form-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Seleção de Pesquisa */
+.search-select {
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 0 0 5px 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+.search-result-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: var(--background-light);
+}
+
+/* Lista de Produtos */
+.products-list {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    background: white;
+}
+
+.selected-products {
+    margin-top: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+}
+
+/* Resumo de Pagamento */
+.payment-summary {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: none;
+}
+
+.discount-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.discount-input input {
+    width: 80px;
+    text-align: right;
+}
+
+/* Design Responsivo */
+@media (max-width: 768px) {
+    .sale-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 15px;
+    }
+
+    .modal-lg {
+        width: 95%;
+    }
+}
